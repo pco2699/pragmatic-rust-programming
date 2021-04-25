@@ -1,5 +1,5 @@
 [package]
-name = "mandelbrot"
+name = "numberplace"
 version = "0.1.0"
 authors = ["pco2699 <aenkun@gmail.com>"]
 edition = "2018"
@@ -11,7 +11,6 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-js-sys = "0.3.40"
 wasm-bindgen = "0.2.63"
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
@@ -33,15 +32,3 @@ wasm-bindgen-test = "0.3.13"
 [profile.release]
 # Tell `rustc` to optimize for small code size.
 opt-level = "s"
-
-[dependencies.web-sys]
-version = "0.3.4"
-features = [
-    'CanvasRenderingContext2d',
-    'Document',
-    'Element',
-    'HtmlCanvasElement',
-    'ImageData',
-    'Performance',
-    'Window',
-]
